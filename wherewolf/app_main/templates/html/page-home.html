@@ -1,0 +1,17 @@
+{% extends "html/layout-base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div id="feature-container" ></div>
+
+    {% for feature in features %}
+        <div class="feature" >
+            <div class="title" >{{ feature.description1 }}</div>
+            <div class="description" >{{ feature.description2 }}</div>
+            <div class="date" >{{ feature.date_feature }}</div>
+            <div class="company" >{{ feature.company }}</div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

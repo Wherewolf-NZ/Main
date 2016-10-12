@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+        <title>The Wherewolf</title>
+    {% endblock %}
+
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>{% include 'css/css-base.css' %}</style>
+
+    <!-- javascript libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script>
+        // set up initial config object
+        // modules access this through config.js
+        var config = {};
+
+        // load URLs for client reference
+        config.staticUrl = '{{ staticUrl }}';
+        config.mediaUrl = '{{ mediaUrl }}';
+        config.imageUrl = config.staticUrl + "images/";
+
+    </script>
+
+    <script>
+        // config for require
+        var require = {};
+        require['urlArgs'] = "bust=" + (new Date()).getTime();
+    </script>
+
+    <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads. -->
+    <script data-main="{% static "js/main" %}" src="{% static "js/lib/require.js" %}"></script>
+
+</head>
+
+<body>
+{% block body %}
+
+    <div id="layout" >
+        <div id="content">
+            {% block content %}
+                <div></div>
+            {% endblock %}
+        </div>
+
+    </div>
+{% endblock %}
+</body>
+</html>

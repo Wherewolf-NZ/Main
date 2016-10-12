@@ -1,0 +1,54 @@
+/* wherewolf custom CSS file */
+html
+{
+    height: 100%;
+    width: 100%;
+
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    font-size: 1em;
+    line-height: 1.6em;
+    position: relative;
+    min-height: 100%;
+    box-sizing: border-box;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.feature {
+    margin: 20px;
+    padding: 5px 4px 8px 4px;
+    max-width: 300px;
+    background-color: beige;
+}
+
+
+.feature .title {
+    font-size: 1.4em;
+    color: darkblue;
+    margin-bottom: 8px;
+}
+
+.feature .description {
+
+    margin-bottom: 10px;
+}
+
+.feature .date {
+    color: #4d4d4d;
+
+}
+
+.feature .company {
+    color: #4d4d4d;
+    font-weight: bold;
+
+}
